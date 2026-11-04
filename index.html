@@ -40,7 +40,7 @@
     <nav class="desk-nav" aria-label="منوی اصلی">
       <a href="#ecosystem">معرفی زیست‌بوم جدید برنامه درسی</a><a href="#support">خدمات پشتیبان مدارس</a><a href="#changes">تغییراتی که رخ می‌دهد</a><a href="#faq">سؤالات متداول</a>
     </nav>
-    <a class="btn hdr-cta" href="#documents">اسناد طرح <svg class="ico"><use href="#i-dl"/></svg></a>
+    <a class="btn hdr-cta" href="#support">سامانه‌های پشتیبان</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="باز کردن منو"><svg class="ico"><use href="#i-menu"/></svg></button>
   </div>
   <div class="progress" id="progress"></div>
@@ -58,7 +58,7 @@
       <li><a href="#changes">تغییراتی که رخ می‌دهد</a></li>
       <li><a href="#faq">سؤالات متداول</a></li>
     </ol>
-    <a class="btn block menu-cta" href="#documents">دریافت اسناد پشتیبان طرح <svg class="ico"><use href="#i-dl"/></svg></a>
+    <a class="btn block menu-cta" href="#support">سامانه‌های پشتیبان</a>
   </div>
 </div>
 
@@ -157,19 +157,19 @@
     </div>
 
     <div class="steps reveal" id="steps" role="list" aria-label="سه خدمت پشتیبان مدرسه">
-      <article class="svc" role="listitem" data-n="۱" style="--d:0;--sc:var(--mint2);--accent:var(--leaf);--tint:#e9f6ef">
+      <article class="svc" id="svc-guide" role="listitem" data-n="۱" style="--d:0;--sc:var(--mint2);--accent:var(--leaf);--tint:#e9f6ef">
         <span class="svc-n">۱</span>
         <div class="svc-top"><svg class="ico"><use href="#i-compass"/></svg><div><small>خدمت اول · راهنمایی روشن</small><h3>راهنمای عمل برنامه درسی مدرسه‌ای</h3></div></div>
         <p>ترجمه‌ای از برنامه درسی ملی برای اجرا در مدرسه است که اهداف و انتظارات یادگیری، دامنه محتوا و چارچوب برنامه‌ها و فعالیت‌های هر دوره و پایه تحصیلی را به‌صورت یکپارچه و با جزئیات روشن در اختیار مدرسه قرار می‌دهد. این راهنما به مدرسه کمک می‌کند اهداف برنامه درسی ملی را به برنامه‌ها و فعالیت‌های قابل اجرا تبدیل کند.</p>
         <a class="btn dark svc-cta" href="docs/school-curriculum.pdf" download="راهنمای عمل برنامه درسی مدرسه‌ای.pdf">دانلود <svg class="ico"><use href="#i-dl"/></svg></a>
       </article>
-      <article class="svc" role="listitem" data-n="۲" style="--d:1;--sc:var(--sun2);--accent:var(--sun);--tint:#fff6dc">
+      <article class="svc" id="svc-packs" role="listitem" data-n="۲" style="--d:1;--sc:var(--sun2);--accent:var(--sun);--tint:#fff6dc">
         <span class="svc-n">۲</span>
         <div class="svc-top"><svg class="ico"><use href="#i-box"/></svg><div><small>خدمت دوم · منابع مناسب</small><h3>بسته‌های تربیت و یادگیری</h3></div></div>
         <p>مجموعه‌ای از منابع و مواد آموزشی است که در کنار کتاب‌های درسی، نمونه‌های متنوعی از فرصت‌های تربیت و یادگیری را همراه با آموزش شیوه استفاده از آن‌ها در اختیار مدرسه قرار می‌دهد. این منابع به مدرسه کمک می‌کنند فرصت‌های متنوعی برای تربیت و یادگیری در مسیر تحقق اهداف برنامه درسی فراهم کند.</p>
         <a class="btn dark svc-cta" href="https://hamyarmoalem.oerp.ir" target="_blank" rel="noopener">ورود به سامانه همیار معلم <svg class="ico"><use href="#i-left"/></svg></a>
       </article>
-      <article class="svc" role="listitem" data-n="۳" style="--d:2;--sc:var(--peach);--accent:var(--coral);--tint:#ffeee5">
+      <article class="svc" id="svc-hami" role="listitem" data-n="۳" style="--d:2;--sc:var(--peach);--accent:var(--coral);--tint:#ffeee5">
         <span class="svc-n">۳</span>
         <div class="svc-top"><svg class="ico"><use href="#i-shield"/></svg><div><small>خدمت سوم · پشتیبانی مستمر</small><h3>نظام پشتیبانی علمی اجرا در مدرسه</h3></div></div>
         <p>نظامی برای پشتیبانی از اجرای درست برنامه درسی در مدرسه است که با توانمندسازی عوامل مدرسه و مشارکت سطوح مختلف آموزش و پرورش، زمینه استقرار آن را فراهم می‌کند. همچنین با رصد اجرا و دریافت بازخورد، به اصلاح برنامه و پشتیبانی بهتر از مدرسه کمک می‌کند.</p>
@@ -319,6 +319,14 @@
   </div>
 </footer>
 
+<nav class="svc-dock is-away" id="svcDock" aria-label="دسترسی سریع به خدمات پشتیبان">
+  <a class="dock-head" href="#support">خدمات پشتیبان<svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+  <div class="dock-row">
+    <a href="#svc-guide"><svg class="ico" aria-hidden="true"><use href="#i-compass"/></svg><span>راهنمای عمل</span></a>
+    <a href="#svc-packs"><svg class="ico" aria-hidden="true"><use href="#i-box"/></svg><span>همیار معلم</span></a>
+    <a href="#svc-hami"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span>سامانه حامی</span></a>
+  </div>
+</nav>
 <a class="to-top" id="toTop" href="#home" aria-label="بازگشت به بالای صفحه"><svg class="ico"><use href="#i-up"/></svg></a>
 
 <script src="js/main.min.js"></script>

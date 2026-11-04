@@ -16,12 +16,24 @@
   /* scroll progress + support line (desktop) */
   var bar=document.getElementById('progress'),steps=document.getElementById('steps'),svcs=steps.querySelectorAll('.svc'),ticking=false;
   var wide=matchMedia('(min-width:960px)');
-  var header=document.querySelector('.header'),toTop=document.getElementById('toTop'),plx=document.querySelectorAll('[data-parallax]');
+  var header=document.querySelector('.header'),toTop=document.getElementById('toTop'),dock=document.getElementById('svcDock'),eco=document.getElementById('ecosystem'),support=document.getElementById('support'),plx=document.querySelectorAll('[data-parallax]');
   function onScroll(){
     var h=root.scrollHeight-innerHeight;
     bar.style.setProperty('--p',h>0?(scrollY/h).toFixed(4):0);
     header.classList.toggle('scrolled',scrollY>24);
     toTop.classList.toggle('show',scrollY>innerHeight*.9);
+    if(dock){
+      var reached=false,onSupport=false;
+      if(eco){
+        var er=eco.getBoundingClientRect();
+        reached=er.top+er.height/2<=innerHeight/2;
+      }
+      if(support){
+        var sr=support.getBoundingClientRect();
+        onSupport=sr.top<innerHeight*.78&&sr.bottom>120;
+      }
+      dock.classList.toggle('is-away',!reached||onSupport);
+    }
     if(!reduced)plx.forEach(function(img){
       var r=img.parentElement.getBoundingClientRect();
       if(r.bottom<0||r.top>innerHeight)return;
